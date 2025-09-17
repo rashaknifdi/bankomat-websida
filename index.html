@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>BankomatApp</title>
+  <link rel="stylesheet" href="style.css"> <!-- Länk till CSS-filn -->
+</head>
+<body>
+  
+  <div class="bankomat-container">
+    <h1> Bankomat App </h1>
+
+    <div id="user-info" class="user-info"></div><!-- visa information om inloggad användare -->
+    
+    <div id="message" class="screen"> Välkommen! Logga in.</div> <!-- Meddelandeområde-->
+    
+
+    <div class="input-section">
+      <p>Användarnamn</p>
+      <input type="text" id="username" placeholder="Användarnamn"> <!-- Fält för användarnamn -->
+      <p>Pinkod</p>
+      <input type="password" id="pin" placeholder="Pinkod"><!-- Fält för pinkod-->
+      <button onclick="login()">Logga in</button> <!-- Knapp för inloggning -->
+      <button onclick="logout()">Logga ut</button><!-- Knapp för utloggning -->
+    </div>
+  
+    <input type="text" class="amount" id="amount" placeholder="Ange belopp" readonly><!-- Beloppsfält-->
+
+    <div class="keypad"> <!-- keypad för beloppsinmatning -->
+      <button onclick="appendNumber(1)">1</button>
+      <button onclick="appendNumber(2)">2</button>
+      <button onclick="appendNumber(3)">3</button>
+      <button onclick="appendNumber(4)">4</button>
+      <button onclick="appendNumber(5)">5</button>
+      <button onclick="appendNumber(6)">6</button>
+      <button onclick="appendNumber(7)">7</button>
+      <button onclick="appendNumber(8)">8</button>
+      <button onclick="appendNumber(9)">9</button>
+      <button onclick="appendNumber(0)">0</button>
+      <button onclick="clearInput()">C</button> <!-- Knapp för att rensa inmatning -->
+    </div>
+
+    <div class="actions">
+      <button onclick="showBalance()">Visa Saldo</button> <!-- Knapp för att visa saldo -->
+      <button onclick="deposit()">Insättning</button> <!-- Knapp för insättning -->
+      <button onclick="withdraw()">Uttag</button> <!-- Knapp för uttag -->
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- link till JavaScript-fil -->
+</body>
+</html>
